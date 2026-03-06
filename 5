@@ -1,0 +1,18 @@
+def run_length_decode(s):
+    result = ""
+    char = ""
+
+    for i in s:
+        if i.isalpha():
+            char = i
+        else:
+            result += char * int(i)
+
+    return result
+
+
+encoded = "A3B2C4"
+decoded = run_length_decode(encoded)
+
+print("Encoded:", encoded)
+print("Decoded:", decoded)
